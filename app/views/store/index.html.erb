@@ -1,6 +1,10 @@
 <h1>Catalogo de Produtos</h1>
 
+<% cache @products do %>
 <% @products.each do |product| %>
+
+    <% cache product do %>
+
     <div class="entry">
       <h3><%= product.title %></h3>
       <%= sanitize product.description %>
@@ -10,4 +14,8 @@
         </span>
       </div>
     </div>
+
+    <% end %>
+
+<% end %>
 <% end %>
