@@ -1,1 +1,5 @@
 $('#cart').html("<%= j render(@cart) %>");
+
+$('#current_item')
+    .css({'background-color' : '#0bd8fd'})
+    .animate({ 'background-color': '#FFFFFF' }, 1000)
