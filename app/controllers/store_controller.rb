@@ -1,5 +1,8 @@
 class StoreController < ApplicationController
 
+  include CurrentCart
+  before_action :set_cart
+
   # Tela inicial da aplicacao
   def index
     @products = Product.order(:title)
