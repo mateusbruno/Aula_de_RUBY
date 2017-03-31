@@ -1,0 +1,7 @@
+<h2>Meu carrinho</h2>
+
+<ul>
+  <%= render @cart.line_items %>
+</ul>
+
+<%= button_to 'Limpar o carrinho', @cart, method: :delete, data: {confirm: 'Certeza?'} %>
