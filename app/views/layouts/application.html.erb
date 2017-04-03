@@ -9,9 +9,12 @@
   </head>
 
   <body>
-    <div id="cart">
-      <%= render @cart %>
-    </div>
+      <% if @cart %>
+          <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+            <%= render @cart %>
+          <% end %>
+      <% end %>
+
     <%= yield %>
   </body>
 </html>
